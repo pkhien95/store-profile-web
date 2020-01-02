@@ -6,7 +6,7 @@ export interface Address {
 
 export interface CompanyInfo {
   name: string
-  taxCode: string
+  tax_code: string
   address: Address
 }
 
