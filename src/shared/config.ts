@@ -9,4 +9,4 @@ const config: any = {
   }
 }
 
-export default config[process.env.RACK_ENV || 'development']
+export default config[process.env.NODE_ENV || 'development']

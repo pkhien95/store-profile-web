@@ -3,15 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="49c8cfdd-1459-46c8-8895-9305e54ed35b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/store-profile/edit/EditStore.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/store-profile/edit/EditStore.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/store-profile/edit/EditStoreComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/store-profile/edit/EditStoreComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/store-profile/edit/EditStoreContainer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/store-profile/edit/EditStoreContainer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/store-profile/edit/state/reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/store-profile/edit/state/reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/store-profile/edit/state/sagas.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/store-profile/edit/state/sagas.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/state/rootReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/rootReducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +17,7 @@
         <option value="TypeScript JSX File" />
         <option value="SCSS File" />
         <option value="TypeScript File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -96,7 +89,7 @@
       <recent name="$PROJECT_DIR$/src/shared/constants" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.Test editStoreSaga.uploadImageAsync should run correctly">
+  <component name="RunManager" selected="Jest.Test viewStoreSaga.fetchStoreAsync should run correctly">
     <configuration name="Test editStoreSaga" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -107,20 +100,6 @@
       <test-file value="$PROJECT_DIR$/src/routes/store-profile/edit/__tests__/sagas.test.js" />
       <test-names>
         <test-name value="Test editStoreSaga" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="Test editStoreSaga.should dispatch actions correctly" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/routes/store-profile/edit/__tests__/sagas.test.js" />
-      <test-names>
-        <test-name value="Test editStoreSaga" />
-        <test-name value="should dispatch actions correctly" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -152,6 +131,34 @@
       </test-names>
       <method v="2" />
     </configuration>
+    <configuration name="Test viewStoreSaga.fetchStoreAsync should run correctly" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/routes/store-profile/view/__tests__/sagas.test.js" />
+      <test-names>
+        <test-name value="Test viewStoreSaga" />
+        <test-name value="fetchStoreAsync should run correctly" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Test viewStoreSaga.should watch fetchStoreRequest" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/routes/store-profile/view/__tests__/sagas.test.js" />
+      <test-names>
+        <test-name value="Test viewStoreSaga" />
+        <test-name value="should watch fetchStoreRequest" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="start" />
@@ -163,10 +170,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Jest.Test editStoreSaga.uploadImageAsync should run correctly" />
+        <item itemvalue="Jest.Test viewStoreSaga.fetchStoreAsync should run correctly" />
+        <item itemvalue="Jest.Test viewStoreSaga.should watch fetchStoreRequest" />
         <item itemvalue="Jest.Test editStoreSaga" />
+        <item itemvalue="Jest.Test editStoreSaga.uploadImageAsync should run correctly" />
         <item itemvalue="Jest.Test editStoreSaga.should watch uploadImageRequest and updateStoreRequest" />
-        <item itemvalue="Jest.Test editStoreSaga.should dispatch actions correctly" />
       </list>
     </recent_temporary>
   </component>
@@ -196,7 +204,7 @@
       <workItem from="1577976366117" duration="8805000" />
       <workItem from="1578059971522" duration="11992000" />
       <workItem from="1578118668386" duration="8517000" />
-      <workItem from="1578144273219" duration="10746000" />
+      <workItem from="1578144273219" duration="11496000" />
     </task>
     <servers />
   </component>
@@ -208,40 +216,44 @@
       <screen x="0" y="23" width="1440" height="816" />
     </state>
     <state x="184" y="92" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.816@0.23.1440.816" timestamp="1577984476540" />
+    <state x="100" y="123" width="1480" height="756" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1578157895486">
+      <screen x="0" y="23" width="1680" height="956" />
+    </state>
+    <state x="100" y="123" width="1480" height="756" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/1680.23.1920.1057/0.23.1680.956@0.23.1680.956" timestamp="1578157895486" />
     <state x="474" y="188" key="EnvironmentVariablesDialog" timestamp="1577984470144">
       <screen x="0" y="23" width="1440" height="816" />
     </state>
     <state x="474" y="188" key="EnvironmentVariablesDialog/0.23.1440.816@0.23.1440.816" timestamp="1577984470144" />
-    <state width="1659" height="237" key="GridCell.Tab.0.bottom" timestamp="1578156751588">
+    <state width="1659" height="237" key="GridCell.Tab.0.bottom" timestamp="1578157846541">
       <screen x="0" y="23" width="1680" height="956" />
     </state>
     <state width="1419" height="191" key="GridCell.Tab.0.bottom/0.23.1440.814@0.23.1440.814" timestamp="1577976813360" />
     <state width="1419" height="191" key="GridCell.Tab.0.bottom/0.23.1440.816@0.23.1440.816" timestamp="1577987402756" />
-    <state width="1659" height="237" key="GridCell.Tab.0.bottom/1680.23.1920.1057/0.23.1680.956@0.23.1680.956" timestamp="1578156751588" />
+    <state width="1659" height="237" key="GridCell.Tab.0.bottom/1680.23.1920.1057/0.23.1680.956@0.23.1680.956" timestamp="1578157846541" />
     <state width="1659" height="237" key="GridCell.Tab.0.bottom/1680.23.1920.1057/0.23.1680.958@0.23.1680.958" timestamp="1578139143151" />
     <state width="1659" height="238" key="GridCell.Tab.0.bottom/1680.23.1920.1057/0.23.1680.960@0.23.1680.960" timestamp="1578074671112" />
-    <state width="1659" height="237" key="GridCell.Tab.0.center" timestamp="1578156751587">
+    <state width="1659" height="237" key="GridCell.Tab.0.center" timestamp="1578157846540">
       <screen x="0" y="23" width="1680" height="956" />
     </state>
     <state width="1419" height="191" key="GridCell.Tab.0.center/0.23.1440.814@0.23.1440.814" timestamp="1577976813359" />
     <state width="1419" height="191" key="GridCell.Tab.0.center/0.23.1440.816@0.23.1440.816" timestamp="1577987402756" />
-    <state width="1659" height="237" key="GridCell.Tab.0.center/1680.23.1920.1057/0.23.1680.956@0.23.1680.956" timestamp="1578156751587" />
+    <state width="1659" height="237" key="GridCell.Tab.0.center/1680.23.1920.1057/0.23.1680.956@0.23.1680.956" timestamp="1578157846540" />
     <state width="1659" height="237" key="GridCell.Tab.0.center/1680.23.1920.1057/0.23.1680.958@0.23.1680.958" timestamp="1578139143150" />
     <state width="1659" height="238" key="GridCell.Tab.0.center/1680.23.1920.1057/0.23.1680.960@0.23.1680.960" timestamp="1578074671111" />
-    <state width="1659" height="237" key="GridCell.Tab.0.left" timestamp="1578156751587">
+    <state width="1659" height="237" key="GridCell.Tab.0.left" timestamp="1578157846539">
       <screen x="0" y="23" width="1680" height="956" />
     </state>
     <state width="1419" height="191" key="GridCell.Tab.0.left/0.23.1440.814@0.23.1440.814" timestamp="1577976813359" />
     <state width="1419" height="191" key="GridCell.Tab.0.left/0.23.1440.816@0.23.1440.816" timestamp="1577987402756" />
-    <state width="1659" height="237" key="GridCell.Tab.0.left/1680.23.1920.1057/0.23.1680.956@0.23.1680.956" timestamp="1578156751587" />
+    <state width="1659" height="237" key="GridCell.Tab.0.left/1680.23.1920.1057/0.23.1680.956@0.23.1680.956" timestamp="1578157846539" />
     <state width="1659" height="237" key="GridCell.Tab.0.left/1680.23.1920.1057/0.23.1680.958@0.23.1680.958" timestamp="1578139143150" />
     <state width="1659" height="238" key="GridCell.Tab.0.left/1680.23.1920.1057/0.23.1680.960@0.23.1680.960" timestamp="1578074671110" />
-    <state width="1659" height="237" key="GridCell.Tab.0.right" timestamp="1578156751588">
+    <state width="1659" height="237" key="GridCell.Tab.0.right" timestamp="1578157846541">
       <screen x="0" y="23" width="1680" height="956" />
     </state>
     <state width="1419" height="191" key="GridCell.Tab.0.right/0.23.1440.814@0.23.1440.814" timestamp="1577976813360" />
     <state width="1419" height="191" key="GridCell.Tab.0.right/0.23.1440.816@0.23.1440.816" timestamp="1577987402756" />
-    <state width="1659" height="237" key="GridCell.Tab.0.right/1680.23.1920.1057/0.23.1680.956@0.23.1680.956" timestamp="1578156751588" />
+    <state width="1659" height="237" key="GridCell.Tab.0.right/1680.23.1920.1057/0.23.1680.956@0.23.1680.956" timestamp="1578157846541" />
     <state width="1659" height="237" key="GridCell.Tab.0.right/1680.23.1920.1057/0.23.1680.958@0.23.1680.958" timestamp="1578139143151" />
     <state width="1659" height="238" key="GridCell.Tab.0.right/1680.23.1920.1057/0.23.1680.960@0.23.1680.960" timestamp="1578074671112" />
     <state x="258" y="77" key="SettingsEditor" timestamp="1578157268448">
@@ -254,11 +266,11 @@
       <screen x="0" y="23" width="1680" height="958" />
     </state>
     <state x="488" y="112" width="703" height="777" key="find.popup/1680.23.1920.1057/0.23.1680.958@0.23.1680.958" timestamp="1578139143067" />
-    <state x="449" y="187" width="782" height="793" key="search.everywhere.popup" timestamp="1578127166546">
+    <state x="449" y="187" width="782" height="793" key="search.everywhere.popup" timestamp="1578158015155">
       <screen x="0" y="23" width="1680" height="956" />
     </state>
     <state x="385" y="163" width="670" height="676" key="search.everywhere.popup/0.23.1440.816@0.23.1440.816" timestamp="1577986035561" />
-    <state x="449" y="187" width="782" height="793" key="search.everywhere.popup/1680.23.1920.1057/0.23.1680.956@0.23.1680.956" timestamp="1578127166546" />
+    <state x="449" y="187" width="782" height="793" key="search.everywhere.popup/1680.23.1920.1057/0.23.1680.956@0.23.1680.956" timestamp="1578158015155" />
     <state x="449" y="188" width="782" height="796" key="search.everywhere.popup/1680.23.1920.1057/0.23.1680.960@0.23.1680.960" timestamp="1578070111616" />
   </component>
 </project>
