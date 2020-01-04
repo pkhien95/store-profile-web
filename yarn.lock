@@ -6759,6 +6759,11 @@ lodash._reinterpolate@^3.0.0:
   resolved "https://registry.yarnpkg.com/lodash._reinterpolate/-/lodash._reinterpolate-3.0.0.tgz#0ccf2d89166af03b3663c796538b75ac6e114d9d"
   integrity sha1-DM8tiRZq8Ds2Y8eWU4t1rG4RTZ0=
 
+lodash.curry@^4.0.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/lodash.curry/-/lodash.curry-4.1.1.tgz#248e36072ede906501d75966200a86dab8b23170"
+  integrity sha1-JI42By7ekGUB11lmIAqG2riyMXA=
+
 lodash.escape@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/lodash.escape/-/lodash.escape-4.0.1.tgz#c9044690c21e04294beaa517712fded1fa88de98"
@@ -9471,6 +9476,13 @@ redux-saga-test-plan@^4.0.0-rc.3:
     lodash.ismatch "^4.4.0"
     object-assign "^4.1.0"
     util-inspect "^0.1.8"
+
+redux-saga-test@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/redux-saga-test/-/redux-saga-test-1.0.1.tgz#7bc2770875bb3d96a9b3e1f1ae1d0fe24b3c12b6"
+  integrity sha1-e8J3CHW7PZaps+Hxrh0P4ks8ErY=
+  dependencies:
+    lodash.curry "^4.0.1"
 
 redux-saga@^1.1.3:
   version "1.1.3"

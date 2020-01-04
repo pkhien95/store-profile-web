@@ -1,8 +1,8 @@
 import React from 'react'
-import logo from './logo.svg'
 import './App.scss'
-import { BrowserRouter as Router, Link } from 'react-router-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
 import Root from './routes'
+import ToastContainer from './shared/components/Toast/ToastContainer'
 
 const App: React.FC = () => {
   return (
@@ -11,6 +11,7 @@ const App: React.FC = () => {
         <div className={'app-content'}>
           <Root />
         </div>
+        <ToastContainer />
       </div>
     </Router>
   )

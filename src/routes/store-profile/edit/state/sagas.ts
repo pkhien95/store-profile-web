@@ -11,7 +11,7 @@ import {
 import { isEmpty } from 'lodash'
 import { updateStore } from '../../../../services/api/store'
 
-function* uploadImageAsync(action: DefaultAction) {
+export function* uploadImageAsync(action: DefaultAction) {
   try {
     const {
       payload: { imageData }
@@ -25,7 +25,7 @@ function* uploadImageAsync(action: DefaultAction) {
   }
 }
 
-function* updateStoreAsync(action: DefaultAction) {
+export function* updateStoreAsync(action: DefaultAction) {
   const {
     payload: { store }
   } = action
@@ -33,7 +33,7 @@ function* updateStoreAsync(action: DefaultAction) {
     const updatedStore = yield call(updateStore, store)
     yield put(updateStoreSuccess(updatedStore))
   } catch (error) {
-    yield put(updateStoreFailure(error))
+    yield put(updateStoreFailure(error.message || 'Cannot update store'))
   }
 }
 

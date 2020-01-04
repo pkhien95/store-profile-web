@@ -2,19 +2,27 @@ import React, { Component } from 'react'
 import styles from './EditStore.module.scss'
 import { RouteComponentProps } from 'react-router-dom'
 import { StoreInfo } from '../../../shared/constants/types'
-import { cloneDeep, isEmpty, head } from 'lodash'
+import { cloneDeep, head, isEmpty } from 'lodash'
 import ReactLoading from 'react-loading'
 import DefaultInput from '../../../shared/components/DefaultInput/DefaultInput'
 import update from 'immutability-helper'
+import { ToastType } from '../../../shared/components/Toast/Toast'
 
 export interface EditStoreProps extends StoreInfo {
   uploadingImage: boolean
   uploadedImageUrl: string
+  needReload: boolean
+  updating: boolean
+  error: string
   uploadImage: (imageData: any) => void
   updateStore: (store: StoreInfo) => void
+  fetchStore: (id: number) => void
+  showToast: (type: ToastType, message: string) => void
 }
 
-interface State extends StoreInfo {}
+interface State extends StoreInfo {
+  imageHash: number
+}
 
 type PropsWithRouter = EditStoreProps & RouteComponentProps
 
@@ -22,7 +30,14 @@ class EditStoreComponent extends Component<PropsWithRouter, State> {
   constructor(props: PropsWithRouter) {
     super(props)
 
-    this.state = cloneDeep(this.props)
+    this.state = { ...cloneDeep(this.props), imageHash: Date.now() }
+  }
+
+  reloadState = () => {
+    this.setState({
+      ...cloneDeep(this.props),
+      imageHash: Date.now()
+    })
   }
 
   componentDidUpdate(
@@ -30,19 +45,58 @@ class EditStoreComponent extends Component<PropsWithRouter, State> {
     prevState: Readonly<State>,
     snapshot?: any
   ): void {
-    const { uploadingImage, uploadedImageUrl } = this.props
+    const {
+      uploadingImage,
+      uploadedImageUrl,
+      needReload,
+      updating,
+      error
+    } = this.props
+    const {
+      uploadingImage: prevUploadingImage,
+      uploadedImageUrl: prevUploadedImageUrl,
+      needReload: prevNeedReload,
+      updating: prevUpdating,
+      error: prevError
+    } = prevProps
     const { image } = this.state
     if (
       !uploadingImage &&
       !isEmpty(uploadedImageUrl) &&
-      uploadedImageUrl !== image
+      uploadedImageUrl !== image &&
+      prevUploadingImage !== uploadingImage &&
+      prevUploadedImageUrl !== uploadedImageUrl
     ) {
       this.setState({
         image: uploadedImageUrl
       })
     }
+
+    if (needReload && prevNeedReload !== needReload) {
+      this.reloadState()
+    }
+
+    if (!updating && isEmpty(error) && updating !== prevUpdating) {
+      this.props.showToast(ToastType.INFO, 'Updated store info successfully')
+    }
+
+    if (
+      !updating &&
+      !isEmpty(error) &&
+      updating !== prevUpdating &&
+      error !== prevError
+    ) {
+      this.props.showToast(ToastType.ERROR, error)
+    }
   }
 
+  componentDidMount(): void {
+    if (isEmpty(this.props.name)) {
+      this.props.fetchStore(1)
+    }
+  }
+
+  //region handlers
   onImageSelected = (event: React.ChangeEvent<HTMLInputElement>) => {
     const image = head(event.target.files)
     if (image) {
@@ -93,8 +147,9 @@ class EditStoreComponent extends Component<PropsWithRouter, State> {
   }
 
   storePhoneOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const newPhoneNumber = event.target.value
     this.setState({
-      phone: event.target.value
+      phone: newPhoneNumber
     })
   }
 
@@ -166,8 +221,20 @@ class EditStoreComponent extends Component<PropsWithRouter, State> {
     )
   }
 
+  isPhoneNumberValid = (phone: string) => {
+    const regex = /^(?:(?:\(?(?:00|\+)([1-4]\d\d|[1-9]\d?)\)?)?[\-\.\ \\\/]?)?((?:\(?\d{1,}\)?[\-\.\ \\\/]?){0,})(?:[\-\.\ \\\/]?(?:#|ext\.?|extension|x)[\-\.\ \\\/]?(\d+))?$/i
+    return !isEmpty(phone) && phone.match(regex)
+  }
+
   saveOnClick = () => {
     const { id, name, image, address, phone, company } = this.state
+
+    let isValid = this.isPhoneNumberValid(phone)
+    if (!isValid) {
+      this.props.showToast(ToastType.ERROR, 'Phone number is not valid')
+      return
+    }
+
     const newStore: StoreInfo = {
       id,
       name,
@@ -180,9 +247,24 @@ class EditStoreComponent extends Component<PropsWithRouter, State> {
     this.props.updateStore(newStore)
   }
 
+  removeOnClick = () => {
+    console.log(this.state.image)
+    console.log(this.props.image)
+    this.setState({
+      image: this.props.image,
+      imageHash: Date.now()
+    })
+  }
+
+  cancelOnClick = () => {
+    this.props.history.goBack()
+  }
+  //endregion
+
   render() {
     const {
       image,
+      imageHash,
       name,
       phone,
       address: { street_address, district, city },
@@ -197,7 +279,7 @@ class EditStoreComponent extends Component<PropsWithRouter, State> {
       }
     } = this.state
 
-    const { uploadingImage } = this.props
+    const { uploadingImage, updating } = this.props
 
     return (
       <div className={styles.container}>
@@ -208,18 +290,24 @@ class EditStoreComponent extends Component<PropsWithRouter, State> {
         <div className={styles.content}>
           <div className={styles.leftColumn}>
             <div className={styles.photoContainer}>
-              <img className={styles.photo} src={image} alt={'store-image'} />
+              <img
+                className={styles.photo}
+                src={`${image}?${imageHash}`}
+                alt={'store'}
+              />
               {uploadingImage && (
                 <ReactLoading
                   className={styles.loading}
                   type={'bubbles'}
-                  color={'blue'}
+                  color={'#54A46E'}
                 />
               )}
             </div>
 
             <div className={styles.buttonContainer}>
-              <button className={styles.removeBtn}>Remove</button>
+              <button className={styles.removeBtn} onClick={this.removeOnClick}>
+                Remove
+              </button>
               <label htmlFor='upload-photo'>Upload Image</label>
               <input
                 type={'file'}
@@ -308,11 +396,24 @@ class EditStoreComponent extends Component<PropsWithRouter, State> {
               />
             </div>
 
-            <button className={styles.saveButton} onClick={this.saveOnClick}>
-              Save
-            </button>
-
-            <button className={styles.cancelButton}>Cancel</button>
+            <div className={styles.saveButtonContainer}>
+              {updating ? (
+                <ReactLoading
+                  className={styles.saveButtonLoading}
+                  type={'bubbles'}
+                  color={'white'}
+                />
+              ) : (
+                <button
+                  className={styles.saveButton}
+                  onClick={this.saveOnClick}
+                  disabled={updating}
+                >
+                  Save
+                </button>
+              )}
+            </div>
+            <button className={styles.cancelButton} onClick={this.cancelOnClick}>Cancel</button>
           </div>
         </div>
       </div>

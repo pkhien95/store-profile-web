@@ -3,7 +3,7 @@ import { call, put, takeLatest } from 'redux-saga/effects'
 import { FETCH_STORE_REQUEST } from './action-types'
 import { fetchStoreFailure, fetchStoreSuccess } from './actions'
 
-function* fetchStoreAsync(action: any) {
+export function* fetchStoreAsync(action: any) {
   const {
     payload: { id }
   } = action
