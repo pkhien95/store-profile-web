@@ -1,8 +1,9 @@
 import { combineReducers } from 'redux'
-import { viewStoreReducer } from '../routes/store-profile'
+import { editStoreReducer, viewStoreReducer } from '../routes/store-profile'
 
 const rootReducer = combineReducers({
-  viewStore: viewStoreReducer
+  viewStore: viewStoreReducer,
+  editStore: editStoreReducer
 })
 
 export default rootReducer

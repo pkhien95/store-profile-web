@@ -1,6 +1,6 @@
 import { all } from 'redux-saga/effects'
-import { viewStoreSaga } from '../routes/store-profile'
+import { viewStoreSaga, editStoreSaga } from '../routes/store-profile'
 
 export default function* rootSaga() {
-  yield all([viewStoreSaga()])
+  yield all([viewStoreSaga(), editStoreSaga()])
 }

@@ -1,6 +1,15 @@
 import { ViewStore } from './view'
 import { EditStore } from './edit'
-import reducer from './view/state/reducer'
+import viewStoreReducer from './view/state/reducer'
+import editStoreReducer from './edit/state/reducer'
 import viewStoreSaga from './view/state/sagas'
+import editStoreSaga from './edit/state/sagas'
 
-export { ViewStore, EditStore, reducer as viewStoreReducer, viewStoreSaga }
+export {
+  ViewStore,
+  EditStore,
+  viewStoreReducer,
+  editStoreReducer,
+  viewStoreSaga,
+  editStoreSaga
+}

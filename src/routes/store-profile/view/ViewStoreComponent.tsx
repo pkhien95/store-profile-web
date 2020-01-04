@@ -2,16 +2,23 @@ import React, { Component } from 'react'
 import './styles.scss'
 import { StoreInfo } from '../../../shared/constants/types'
 import { combineAddress } from '../../../shared/utils'
-import { fetchStore } from '../../../services/api/store'
+import DefaultButton from '../../../shared/components/DefaultButton/DefaultButton'
+import { RouteComponentProps } from 'react-router-dom'
 
 export interface ViewStoreComponentProps extends StoreInfo {
   fetchStore: (id: number) => void
 }
 
-class ViewStoreComponent extends Component<ViewStoreComponentProps> {
+class ViewStoreComponent extends Component<
+  ViewStoreComponentProps & RouteComponentProps
+> {
   componentDidMount() {
     const { fetchStore } = this.props
     fetchStore(1)
+  }
+
+  editProfileOnClick = () => {
+    this.props.history.push('/edit')
   }
 
   render() {
@@ -68,6 +75,11 @@ class ViewStoreComponent extends Component<ViewStoreComponentProps> {
                 <span className={'text'}>{companyTaxCode}</span>
               </div>
             </div>
+            <DefaultButton
+              className={'edit-profile-btn'}
+              text={'Edit Profile'}
+              onClick={this.editProfileOnClick}
+            />
           </div>
           <div className={'right-column'}>
             <span className={'block-title'}>Deliver default message</span>

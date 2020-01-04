@@ -6,24 +6,27 @@ import {
 } from '../../../../shared/constants/types'
 import { FETCH_STORE_SUCCESS } from './action-types'
 import update from 'immutability-helper'
+import { UPDATE_STORE_SUCCESS } from '../../edit/state/action-types'
 
 const initialAddress: Address = {
-  street_address: '01 Nguyen Thi Minh Khai',
-  district: '1',
-  city: 'Ho Chi Minh'
+  id: 1,
+  street_address: '',
+  district: '',
+  city: ''
 }
 
 const initialCompany: CompanyInfo = {
-  name: 'Kamero Inc.',
-  tax_code: '123456',
+  id: 1,
+  name: '',
+  tax_code: '',
   address: initialAddress
 }
 
 const initialState: StoreInfo = {
-  name: 'Store 01',
-  phone: '84975542248',
-  image:
-    'https://www.imore.com/sites/imore.com/files/styles/mediumplus/public/field/image/2019/11/catlina-photo.jpeg',
+  id: 1,
+  name: '',
+  phone: '',
+  image: '',
   address: initialAddress,
   company: initialCompany
 }
@@ -32,6 +35,7 @@ const reducer = (state = initialState, action: DefaultAction) => {
   const { type, payload } = action
   switch (type) {
     case FETCH_STORE_SUCCESS:
+    case UPDATE_STORE_SUCCESS:
       const { result } = payload
       return {
         ...state,

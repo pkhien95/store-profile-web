@@ -1,0 +1,199 @@
+@import '../../../theme/colors';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 20px 100px;
+  flex: 1;
+  overflow: auto;
+}
+
+.header {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  margin-bottom: 30px;
+
+  .headerTitle {
+    font-size: 24px;
+    font-weight: 500;
+    color: $primary;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+
+  .headerDivider {
+    background-color: $primary;
+    width: 50px;
+    height: 3px;
+    border-radius: 3px;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+%block {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.leftColumn {
+  flex: 0.3;
+  @extend %block;
+
+  .photoContainer {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    background-color: gray;
+    border-radius: 5px;
+    overflow: hidden;
+
+    .loading {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .photo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .buttonContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 20px;
+
+    .removeBtn {
+      border: none;
+      font-size: 16px;
+      color: gray;
+      padding: 10px;
+      margin-right: 20px;
+      cursor: pointer;
+      font-weight: 600;
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.7;
+      }
+    }
+
+    label {
+      font-size: 16px;
+      font-weight: 500;
+      background-color: $ghost-gray;
+      padding: 10px 30px;
+      border-radius: 3px;
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.7;
+      }
+    }
+
+    input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+  }
+}
+
+.rightColumn {
+  flex: 0.6;
+  @extend %block;
+  padding: 10px;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  margin-bottom: 30px;
+
+  .blockTitle {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+}
+
+.storeNameInput  {
+  margin-bottom: 20px;
+}
+
+.companyNameInput {
+  margin-bottom: 20px;
+}
+
+.addressContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 20px;
+
+  .streetAddressInput {
+    flex: 1;
+    margin-right: 30px;
+  }
+
+  .districtInput {
+    width: 200px;
+    margin-right: 30px;
+  }
+
+  .cityInput {
+    width: 200px;
+  }
+}
+
+.saveButton {
+  background-color: $aqua-forest;
+  padding: 10px 0;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+}
+
+.cancelButton {
+  background-color: white;
+  padding: 10px 0;
+  color: gray;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 3px;
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+}

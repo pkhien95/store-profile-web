@@ -5,7 +5,7 @@ import * as StoreProfileRoutes from './store-profile'
 const Root: React.FC = () => {
   return (
     <Switch>
-      <Route path={'/'}>
+      <Route path={'/'} exact>
         <StoreProfileRoutes.ViewStore />
       </Route>
       <Route path={'/edit'}>

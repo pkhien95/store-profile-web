@@ -1,4 +1,4 @@
-@import "../../../theme/colors";
+@import '../../../theme/colors';
 
 .container {
   display: flex;
@@ -52,7 +52,6 @@
   flex: 0.3;
   @extend %card;
   padding: 10px;
-
 }
 
 .right-column {
@@ -109,4 +108,8 @@
   .row:not(:last-child) {
     margin-bottom: 10px;
   }
+}
+
+.edit-profile-btn {
+  margin-top: 20px;
 }

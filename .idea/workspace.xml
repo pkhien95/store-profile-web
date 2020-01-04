@@ -6,15 +6,22 @@
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/middlewares/rootSaga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/middlewares/rootSaga.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/Root.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Root.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/store-profile/edit/EditStoreComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/store-profile/edit/EditStoreComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/store-profile/edit/EditStoreContainer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/store-profile/edit/EditStoreContainer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/store-profile/edit/state/action-types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/store-profile/edit/state/action-types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/store-profile/edit/state/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/store-profile/edit/state/actions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/store-profile/edit/state/reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/store-profile/edit/state/reducer.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/store-profile/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/store-profile/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/store-profile/view/ViewStoreComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/store-profile/view/ViewStoreComponent.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/store-profile/view/ViewStoreContainer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/store-profile/view/ViewStoreContainer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/store-profile/view/state/action-types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/store-profile/view/state/action-types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/store-profile/view/state/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/store-profile/view/state/actions.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/store-profile/view/state/reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/store-profile/view/state/reducer.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/store-profile/view/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/store-profile/view/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/api/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/api/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/shared/constants/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/constants/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/state/configureStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/configureStore.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/state/rootReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/rootReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/theme/colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/colors.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,20 +32,12 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript JSX File" />
         <option value="tsconfig.json" />
-        <option value="SCSS File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
+        <option value="SCSS File" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>App</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>app</replace>
-    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -53,11 +52,6 @@
         <option value="$PROJECT_DIR$/.idea/modules.xml" />
       </list>
     </option>
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="2048" />
-    <option name="height" value="1050" />
   </component>
   <component name="ProjectId" id="1VqMqdxoM2xs12lSjV0valsY0Hp" />
   <component name="ProjectLevelVcsManager">
@@ -89,18 +83,19 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/routes/store-profile/edit/state" />
-      <recent name="$PROJECT_DIR$/src/routes/store-profile/view" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/shared/components/DefaultButton" />
       <recent name="$PROJECT_DIR$/src/shared/constants" />
       <recent name="$PROJECT_DIR$/src/routes/store-profile/view" />
       <recent name="$PROJECT_DIR$/src/routes/store-profile/edit" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/routes/store-profile/edit/state" />
+      <recent name="$PROJECT_DIR$/src/routes/store-profile/view" />
     </key>
   </component>
   <component name="RunManager">
@@ -137,7 +132,9 @@
       <option name="presentableId" value="Default" />
       <updated>1577938818649</updated>
       <workItem from="1577938819848" duration="12852000" />
-      <workItem from="1577976366117" duration="8435000" />
+      <workItem from="1577976366117" duration="8805000" />
+      <workItem from="1578059971522" duration="11992000" />
+      <workItem from="1578118668386" duration="8298000" />
     </task>
     <servers />
   </component>
@@ -153,34 +150,49 @@
       <screen x="0" y="23" width="1440" height="816" />
     </state>
     <state x="474" y="188" key="EnvironmentVariablesDialog/0.23.1440.816@0.23.1440.816" timestamp="1577984470144" />
-    <state width="1419" height="191" key="GridCell.Tab.0.bottom" timestamp="1577985906393">
-      <screen x="0" y="23" width="1440" height="816" />
+    <state width="1659" height="237" key="GridCell.Tab.0.bottom" timestamp="1578138760867">
+      <screen x="0" y="23" width="1680" height="958" />
     </state>
     <state width="1419" height="191" key="GridCell.Tab.0.bottom/0.23.1440.814@0.23.1440.814" timestamp="1577976813360" />
-    <state width="1419" height="191" key="GridCell.Tab.0.bottom/0.23.1440.816@0.23.1440.816" timestamp="1577985906393" />
-    <state width="1419" height="191" key="GridCell.Tab.0.center" timestamp="1577985906392">
-      <screen x="0" y="23" width="1440" height="816" />
+    <state width="1419" height="191" key="GridCell.Tab.0.bottom/0.23.1440.816@0.23.1440.816" timestamp="1577987402756" />
+    <state width="1659" height="238" key="GridCell.Tab.0.bottom/1680.23.1920.1057/0.23.1680.956@0.23.1680.956" timestamp="1578075133204" />
+    <state width="1659" height="237" key="GridCell.Tab.0.bottom/1680.23.1920.1057/0.23.1680.958@0.23.1680.958" timestamp="1578138760867" />
+    <state width="1659" height="238" key="GridCell.Tab.0.bottom/1680.23.1920.1057/0.23.1680.960@0.23.1680.960" timestamp="1578074671112" />
+    <state width="1659" height="237" key="GridCell.Tab.0.center" timestamp="1578138760866">
+      <screen x="0" y="23" width="1680" height="958" />
     </state>
     <state width="1419" height="191" key="GridCell.Tab.0.center/0.23.1440.814@0.23.1440.814" timestamp="1577976813359" />
-    <state width="1419" height="191" key="GridCell.Tab.0.center/0.23.1440.816@0.23.1440.816" timestamp="1577985906392" />
-    <state width="1419" height="191" key="GridCell.Tab.0.left" timestamp="1577985906392">
-      <screen x="0" y="23" width="1440" height="816" />
+    <state width="1419" height="191" key="GridCell.Tab.0.center/0.23.1440.816@0.23.1440.816" timestamp="1577987402756" />
+    <state width="1659" height="238" key="GridCell.Tab.0.center/1680.23.1920.1057/0.23.1680.956@0.23.1680.956" timestamp="1578075133204" />
+    <state width="1659" height="237" key="GridCell.Tab.0.center/1680.23.1920.1057/0.23.1680.958@0.23.1680.958" timestamp="1578138760866" />
+    <state width="1659" height="238" key="GridCell.Tab.0.center/1680.23.1920.1057/0.23.1680.960@0.23.1680.960" timestamp="1578074671111" />
+    <state width="1659" height="237" key="GridCell.Tab.0.left" timestamp="1578138760865">
+      <screen x="0" y="23" width="1680" height="958" />
     </state>
     <state width="1419" height="191" key="GridCell.Tab.0.left/0.23.1440.814@0.23.1440.814" timestamp="1577976813359" />
-    <state width="1419" height="191" key="GridCell.Tab.0.left/0.23.1440.816@0.23.1440.816" timestamp="1577985906392" />
-    <state width="1419" height="191" key="GridCell.Tab.0.right" timestamp="1577985906393">
-      <screen x="0" y="23" width="1440" height="816" />
+    <state width="1419" height="191" key="GridCell.Tab.0.left/0.23.1440.816@0.23.1440.816" timestamp="1577987402756" />
+    <state width="1659" height="238" key="GridCell.Tab.0.left/1680.23.1920.1057/0.23.1680.956@0.23.1680.956" timestamp="1578075133204" />
+    <state width="1659" height="237" key="GridCell.Tab.0.left/1680.23.1920.1057/0.23.1680.958@0.23.1680.958" timestamp="1578138760865" />
+    <state width="1659" height="238" key="GridCell.Tab.0.left/1680.23.1920.1057/0.23.1680.960@0.23.1680.960" timestamp="1578074671110" />
+    <state width="1659" height="237" key="GridCell.Tab.0.right" timestamp="1578138760866">
+      <screen x="0" y="23" width="1680" height="958" />
     </state>
     <state width="1419" height="191" key="GridCell.Tab.0.right/0.23.1440.814@0.23.1440.814" timestamp="1577976813360" />
-    <state width="1419" height="191" key="GridCell.Tab.0.right/0.23.1440.816@0.23.1440.816" timestamp="1577985906393" />
-    <state x="221" y="69" key="SettingsEditor" timestamp="1577979176545">
-      <screen x="0" y="23" width="1440" height="816" />
+    <state width="1419" height="191" key="GridCell.Tab.0.right/0.23.1440.816@0.23.1440.816" timestamp="1577987402756" />
+    <state width="1659" height="238" key="GridCell.Tab.0.right/1680.23.1920.1057/0.23.1680.956@0.23.1680.956" timestamp="1578075133204" />
+    <state width="1659" height="237" key="GridCell.Tab.0.right/1680.23.1920.1057/0.23.1680.958@0.23.1680.958" timestamp="1578138760866" />
+    <state width="1659" height="238" key="GridCell.Tab.0.right/1680.23.1920.1057/0.23.1680.960@0.23.1680.960" timestamp="1578074671112" />
+    <state x="258" y="77" key="SettingsEditor" timestamp="1578126199755">
+      <screen x="0" y="23" width="1680" height="956" />
     </state>
     <state x="221" y="69" key="SettingsEditor/0.23.1440.814@0.23.1440.814" timestamp="1577978937054" />
     <state x="221" y="69" key="SettingsEditor/0.23.1440.816@0.23.1440.816" timestamp="1577979176545" />
-    <state x="385" y="163" width="670" height="676" key="search.everywhere.popup" timestamp="1577986035561">
-      <screen x="0" y="23" width="1440" height="816" />
+    <state x="258" y="77" key="SettingsEditor/1680.23.1920.1057/0.23.1680.956@0.23.1680.956" timestamp="1578126199755" />
+    <state x="449" y="187" width="782" height="793" key="search.everywhere.popup" timestamp="1578127166546">
+      <screen x="0" y="23" width="1680" height="956" />
     </state>
     <state x="385" y="163" width="670" height="676" key="search.everywhere.popup/0.23.1440.816@0.23.1440.816" timestamp="1577986035561" />
+    <state x="449" y="187" width="782" height="793" key="search.everywhere.popup/1680.23.1920.1057/0.23.1680.956@0.23.1680.956" timestamp="1578127166546" />
+    <state x="449" y="188" width="782" height="796" key="search.everywhere.popup/1680.23.1920.1057/0.23.1680.960@0.23.1680.960" timestamp="1578070111616" />
   </component>
 </project>

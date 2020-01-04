@@ -1,8 +1,10 @@
-import { connect, DispatchProp } from 'react-redux'
+import { connect } from 'react-redux'
 import ViewStoreComponent from './ViewStoreComponent'
 import { StoreInfo } from '../../../shared/constants/types'
 import { fetchStoreRequest } from './state/actions'
-import { Dispatch } from 'redux'
+import { compose, Dispatch } from 'redux'
+import { withRouter } from 'react-router-dom'
+import React from 'react'
 
 const mapStateToProps = (state: any) => {
   const viewStoreData: StoreInfo = state.viewStore
@@ -17,4 +19,7 @@ const mapDispatchToProps = (dispatch: Dispatch) => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(ViewStoreComponent)
+export default compose(
+  withRouter,
+  connect(mapStateToProps, mapDispatchToProps)
+)(ViewStoreComponent) as React.ComponentType
