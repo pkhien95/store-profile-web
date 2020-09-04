@@ -16,7 +16,7 @@
     "enzyme-adapter-react-16": "^1.15.2",
     "immutability-helper": "^3.0.1",
     "lodash": "^4.17.15",
-    "node-sass": "^4.13.0",
+    "node-sass": "^4.13.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-loading": "^2.0.3",
